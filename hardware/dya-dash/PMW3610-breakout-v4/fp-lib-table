@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "0_pmw3610-breakout")(type "KiCad")(uri "${KIPRJMOD}/../../kicad_library/pmw3610-breakout.pretty")(options "")(descr ""))
+  (lib (name "0_pmw3610_pcb")(type "KiCad")(uri "${KIPRJMOD}/../../kicad_library/external/pmw3610-pcb/pmw3610_pcb.pretty")(options "")(descr ""))
+)

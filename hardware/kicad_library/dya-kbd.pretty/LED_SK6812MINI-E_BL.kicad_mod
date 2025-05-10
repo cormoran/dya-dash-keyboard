@@ -1,0 +1,199 @@
+(footprint "LED_SK6812MINI-E_BL"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "L1"
+		(at 0 -2.4 0)
+		(layer "F.SilkS")
+		(uuid "b20d06c0-4680-4c44-8003-7ade2be19949")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SK6812MINI-E"
+		(at 0 -4.2 0)
+		(layer "F.Fab")
+		(uuid "97f1e6d2-dee0-4363-9edb-d3db53d52f67")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "B.Fab")
+		(hide yes)
+		(uuid "0a751b1b-e69a-47b7-80f9-07c2f9ac6cb0")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "B.Fab")
+		(hide yes)
+		(uuid "8546a0f4-740d-4334-9ee5-5173feb55a17")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "B.Fab")
+		(hide yes)
+		(uuid "65a412e4-732f-4d91-a247-372d40c10865")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(attr smd)
+	(fp_poly
+		(pts
+			(xy 3.87 -1.57) (xy 4.47 -1.57) (xy 4.47 -0.97)
+		)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+		(uuid "76739a9f-b3af-400c-80d4-fc17fe4c3c32")
+	)
+	(fp_line
+		(start -1.75 -1.6)
+		(end 1.75 -1.6)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "56d9445b-565d-48de-89f3-1be105da2327")
+	)
+	(fp_line
+		(start -1.75 1.6)
+		(end -1.75 -1.6)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "3cd42157-27bd-49e2-a150-52ad03b06f60")
+	)
+	(fp_line
+		(start 1.75 -1.6)
+		(end 1.75 1.6)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "a8a059dc-9e21-4b55-9655-3a7448643eb0")
+	)
+	(fp_line
+		(start 1.75 1.6)
+		(end -1.75 1.6)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "6e939ab4-59f3-4bbd-a5c6-2388aa4640ed")
+	)
+	(fp_line
+		(start -3.5 -1.5)
+		(end 3.5 -1.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "dc0ce8bc-8fa3-452a-9e03-a168744fcb0f")
+	)
+	(fp_line
+		(start -3.5 1.5)
+		(end -3.5 -1.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b03c5b35-53d1-499a-8140-1fad82e22230")
+	)
+	(fp_line
+		(start 3.5 -1.5)
+		(end 3.5 1.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a9920251-cbac-49c3-8966-ff085c4a9e85")
+	)
+	(fp_line
+		(start 3.5 1.5)
+		(end -3.5 1.5)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "174f8567-403f-4e2f-a29a-2cd20d1fff77")
+	)
+	(pad "1" smd rect
+		(at -2.6 -0.75)
+		(size 1.8 0.82)
+		(drill
+			(offset -0.25 0)
+		)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "5a679b0f-522d-4168-8179-0281fd1a6426")
+	)
+	(pad "2" smd roundrect
+		(at 2.6 -0.75 180)
+		(size 1.8 0.82)
+		(drill
+			(offset -0.25 0)
+		)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0)
+		(chamfer_ratio 0.3)
+		(chamfer bottom_left)
+		(uuid "6def6915-a189-4e5b-a5cb-8a5e95f44947")
+	)
+	(pad "3" smd rect
+		(at 2.6 0.75 180)
+		(size 1.8 0.82)
+		(drill
+			(offset -0.25 0)
+		)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "be56ce83-9a8b-412c-8808-347cb37c6077")
+	)
+	(pad "4" smd rect
+		(at -2.6 0.75)
+		(size 1.8 0.82)
+		(drill
+			(offset -0.25 0)
+		)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "6af691d4-1b99-425f-bb0f-c935631bad83")
+	)
+)

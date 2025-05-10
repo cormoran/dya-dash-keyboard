@@ -1,0 +1,147 @@
+(footprint "AAA-battery"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -0.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "6ffce22f-d576-4659-b737-928160016a73")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "AAA-battery"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "a228acf1-d6d0-494f-b9f2-2e78319760b7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f1c5bcd5-cb4c-4e8d-bab9-2893657dfee3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9d468aa2-094b-41aa-9f3e-567d140ddc2d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "66476f13-ff31-4c80-a111-d8ac58318fa8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start -25 -5)
+		(end 25 5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "72d3357e-d13f-4090-8c1f-dff745b2532e")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "3fa5901d-94a5-4534-be71-bed3d1d9bd62")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole custom
+		(at -25 0 90)
+		(size 3 3)
+		(drill oval 10 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 90)
+		(options
+			(clearance outline)
+			(anchor circle)
+		)
+		(primitives
+			(gr_rect
+				(start -6 -1.5)
+				(end 6 1.5)
+				(width 0)
+				(fill yes)
+			)
+			(gr_rect
+				(start -2 -5.5)
+				(end 2 -1.42)
+				(width 0)
+				(fill yes)
+			)
+		)
+		(uuid "ab0a4f1d-0288-40d9-a3cd-64ece7767b9a")
+	)
+	(pad "2" thru_hole custom
+		(at 25.06 0.03 90)
+		(size 3 3)
+		(drill oval 10 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 90)
+		(options
+			(clearance outline)
+			(anchor circle)
+		)
+		(primitives
+			(gr_rect
+				(start -5.97 -1.56)
+				(end 6.03 1.44)
+				(width 0)
+				(fill yes)
+			)
+			(gr_rect
+				(start -2 1.35)
+				(end 2 5.5)
+				(width 0)
+				(fill yes)
+			)
+		)
+		(uuid "4f38ff3d-4621-4547-81da-1f6d02b40ede")
+	)
+)
