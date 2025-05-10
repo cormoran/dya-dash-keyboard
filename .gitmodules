@@ -1,0 +1,24 @@
+[submodule "hardware/kicad_library/external/RP2040-Zero-Kicad"]
+	path = hardware/kicad_library/external/RP2040-Zero-Kicad
+	url = git@github.com:CountParadox/RP2040-Zero-Kicad.git
+[submodule "hardware/kicad_library/external/MX_V2"]
+	path = hardware/kicad_library/external/MX_V2
+	url = git@github.com:ai03-2725/MX_V2.git
+[submodule "hardware/kicad_library/external/Keebio-Parts.pretty"]
+	path = hardware/kicad_library/external/Keebio-Parts.pretty
+	url = git@github.com:keebio/Keebio-Parts.pretty.git
+[submodule "hardware/kicad_library/external/KiCAD_FootPrint"]
+	path = hardware/kicad_library/external/KiCAD_FootPrint
+	url = git@github.com:Salicylic-acid3/KiCAD_FootPrint.git
+[submodule "hardware/kicad_library/external/OPL_Kicad_Library"]
+	path = hardware/kicad_library/external/OPL_Kicad_Library
+	url = git@github.com:Seeed-Studio/OPL_Kicad_Library.git
+[submodule "firmware/zmk_firmware"]
+	path = firmware/zmk_firmware
+	url = git@github.com:cormoran/zmk.git
+[submodule "firmware/zmk-module/zmk-pmw3610-driver"]
+	path = firmware/zmk-module/zmk-pmw3610-driver
+	url = git@github.com:cormoran/zmk-pmw3610-driver.git
+[submodule "firmware/zmk-module/zmk-feature-default-layer"]
+	path = firmware/zmk-module/zmk-feature-default-layer
+	url = git@github.com:cormoran/zmk-feature-default-layer.git
