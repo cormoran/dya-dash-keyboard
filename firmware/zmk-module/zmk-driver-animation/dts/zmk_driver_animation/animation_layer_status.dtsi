@@ -1,0 +1,22 @@
+/*
+ * Copyright (c) 2025 cormoran
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+/ {
+    behaviors {
+        animls: animls {
+            compatible = "zmk,behavior-animation-layer-status";
+            #binding-cells = <2>;
+        };
+    };
+
+    animation_layer_status: animation_layer_status {
+        compatible = "zmk,animation-layer-status";
+        status = "okay";
+        default-color = <HSL(240, 100, 50)>; // blue
+        // pixels = <...>;
+        // colors = <...>;
+    };
+};

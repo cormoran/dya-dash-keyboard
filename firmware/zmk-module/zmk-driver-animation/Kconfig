@@ -1,0 +1,37 @@
+config ZMK_ANIMATION
+    bool "RGB Animations"
+    select LED_STRIP
+
+if ZMK_ANIMATION
+
+config ZMK_ANIMATION_FPS
+    int "Animation FPS"
+    range 1 60
+    default 30
+
+config ZMK_ANIMATION_STOP_ON_IDLE
+    bool "Whether to stop animation on idle state or not"
+    default y
+
+config ZMK_ANIMATION_PIXEL_DISTANCE
+    bool "Generate a lookup table for distances between pixels"
+    default y
+
+config ZMK_ANIMATION_TRIGGER_MAX_PARALELISM
+    int "Maximum parallelism for animation trigger"
+    default 10
+
+config ZMK_ANIMATION_TRIGGER_MAX_DURATION_MS
+    int "Maximum animation play duration for animation trigger"
+    default 10000
+
+config ZMK_ANIMATION_TRIGGER_MIN_DURATION_MS
+    int "Minimum animation play duration for animation trigger"
+    default 1000
+
+config ZMK_ANIMATION_TRIGGER_EXTEND_MS_ON_HOLD
+    int "Animation play duration extension on hold"
+    default 500
+
+#ZMK_ANIMATION
+endif

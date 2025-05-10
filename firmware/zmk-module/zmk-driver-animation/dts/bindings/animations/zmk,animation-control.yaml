@@ -1,0 +1,90 @@
+# Copyright (c) 2020, The ZMK Contributors
+# Copyright (c) 2025, cormoran
+# SPDX-License-Identifier: MIT
+
+description: |
+  Higher-order animation which allows for controlling animation drivers
+  placed underneath it by turning them on and off, cycling though them,
+  or changing the brightness.
+
+compatible: "zmk,animation-control"
+
+properties:
+  label:
+    type: string
+    required: true
+
+  powered-animations:
+    type: phandles
+    required: true
+    description: |
+      Animations played under USB bus power
+
+  battery-animations:
+    type: phandles
+    required: true
+    description: |
+      Animations played under battery power
+
+  behavior-animations:
+    type: phandles
+    required: true
+    description: |
+      Animations playable from behavior
+
+  init-animation:
+    type: phandle
+    description: |
+      Animations played after initialization
+
+  init-animation-duration-ms:
+    type: int
+    default: 0
+    description: |
+      Duration of the init animation in milliseconds.
+      Setting to 0 plays init-animation until it finishes.
+
+  init-animation-delay-ms:
+    type: int
+    default: 100
+    description: |
+      Delay before starting the init animation in milliseconds after startup.
+
+  activation-animation:
+    type: phandle
+    description: |
+      Animations played after activation (resume from sleep)
+
+  activation-animation-duration-ms:
+    type: int
+    default: 0
+    description: |
+      Duration of the activation animation in milliseconds.
+      Setting to 0 plays activation-animation until it finishes.
+
+  ext-power:
+    type: phandle
+    description: |
+      Power for the led stripe device.
+      The power is disabled when no animation selected or idle/sleep mode
+
+  brightness-steps:
+    type: int
+    default: 10
+    description: |
+      How many brightness steps should be supported.
+
+  max-brightness:
+    type: int
+    default: 128
+    description: |
+      Max RGB color value. 0 to 255
+
+  queue-size:
+    type: int
+    default: 16
+    description: |
+      Size of the message queue for the animation control driver.
+      This is used to store messages sent to the animation control driver.
+      The size of the queue should be large enough to hold all messages
+      sent to the animation control driver.

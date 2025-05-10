@@ -1,0 +1,222 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/input/input-event-codes.h>
+#include <behaviors/animation_trigger.dtsi>
+#include "dya_dash-layouts.dtsi"
+#include <dt-bindings/led/led.h>
+#include <dt-bindings/zmk_driver_animation/animation_control.h>
+#include <dt-bindings/zmk_driver_animation/animation_trigger.h>
+#include <input/processors.dtsi>
+#include <behaviors/default_layer.dtsi>
+#include "dya_dash_layer.dtsi"
+#include <zmk_driver_animation/animation.dtsi>
+#include <zmk_driver_animation/animation_layer_status.dtsi>
+
+/ {
+    chosen {
+        zmk,physical-layout = &default_layout;
+        zmk,battery = &vbatt;
+        zmk,animation = &root_animation;
+        zmk,animation-control = &root_animation;
+    };
+
+    root_animation:animation_0 {
+        compatible = "zmk,animation-control";
+        label = "ANIMATION_CTRL_0";
+        powered-animations = <&endpoint_status &rainbow_animation>;
+        battery-animations = <&empty_animation>;
+        behavior-animations = <&battery_status &endpoint_status &animation_layer_status>;
+        init-animation = <&init_animation>;
+        activation-animation = <&battery_status>;
+        activation-animation-duration-ms = <1000>;
+        ext-power = <&led_power>;
+    };
+
+    init_animation:init_animation {
+        compatible = "zmk,animation-compose";
+        animations = <&battery_status &black_animation &endpoint_status>;
+        durations-ms = <1000 200 1000>;
+    };
+    black_animation:black_animation {
+        compatible = "zmk,animation-solid";
+        pixels = <0 1 2 3>;
+        colors = <HSL(0, 0, 0)>;
+    };
+
+    empty_animation:empty_animation {
+        compatible = "zmk,animation-empty";
+        status = "okay";
+    };
+    rainbow_animation:rainbow_animation {
+        compatible = "zmk,animation-solid";
+        status = "okay";
+        pixels = <0 1 2 3>;
+        colors = <HSL(0, 100, 50) HSL(60, 100, 50) HSL(120, 100, 50) HSL(180, 100, 50) HSL(240, 100, 50) HSL(300, 100, 50)>;
+    };
+    red_animation:red_animation {
+        compatible = "zmk,animation-solid";
+        status = "okay";
+        pixels = <0 1 2 3>;
+        colors = <HSL(0, 100, 50)>;
+    };
+    endpoint_status:endpoint_status {
+        compatible = "zmk,animation-endpoint";
+        status = "okay";
+        pixels = <0 1 2 3>;
+        color-open = <HSL(60, 100, 50)>;
+        color-connected = <HSL(240, 100, 50)>;
+        color-disconnected = <HSL(0, 100, 50)>;
+        color-usb = <HSL(120, 100, 25)>;
+    };
+    battery_status:battery_status {
+        compatible = "zmk,animation-battery-status";
+        status = "okay";
+        pixels = <0 1 2 3>;
+        color-high = <HSL(120, 100, 50)>; // green
+        color-middle = <HSL(60, 100, 50)>; // yellow
+        color-low = <HSL(0, 100, 50)>; // red
+    };
+
+    animation: animation {
+        compatible = "zmk,animation";
+        drivers = <&led_strip>;
+        pixels = <&pixel 0 0>,
+            <&pixel 1 0>,
+            <&pixel 2 0>,
+            <&pixel 3 0>;
+        chain-lengths = <4>;
+    };
+
+    default_transform: keymap_transform_0 {
+        compatible = "zmk,matrix-transform";
+        columns = <12>;
+        rows = <6>;
+        map = <
+        // SW1, SW2, SW3, SW4, SW5, SW6,                               SW6, SW5, SW4, SW3, SW2, SW1,
+        // 0 1 2 3 4 5                                                 6 7 8 9 10 11
+        RC(0, 1) RC(0, 2) RC(0, 3) RC(0, 4) RC(0, 5) RC(1, 0)          RC(1, 6) RC(0, 11) RC(0, 10) RC(0, 9) RC(0, 8) RC(0, 7)
+        // SW7, SW8, SW9, SW10, SW11, SW12,                            SW12, SW11, SW10, SW9, SW8, SW7,
+        // 12 13 14 15 16 17                                           18 19 20 21 22 23
+        RC(1, 2) RC(1, 3) RC(1, 4) RC(2, 0) RC(2, 1) RC(2, 3)          RC(2, 9) RC(2, 7) RC(2, 6) RC(1, 10) RC(1, 9) RC(1, 8)
+        // SW13, SW14, SW15, SW16, SW17, SW18,                         SW18, SW17, SW16, SW15, SW14, SW13,
+        // 24 25 26 27 28 29 30                                        31 32 33 34 35 36
+        RC(2, 4) RC(3, 0) RC(3, 1) RC(3, 2) RC(3, 4) RC(4, 0)          RC(4, 6) RC(3, 10) RC(3, 8) RC(3, 7) RC(3, 6) RC(2, 10)
+        // SW19, SW20, SW21, SW22, SW23                                SW23, SW22, SW21, SW20, // 21, 20 can be missing if trackball enabled
+        // 37 38 39 40 41                                              42 43 44 45
+        RC(4, 1) RC(4, 2) RC(4, 3) RC(5, 0) RC(5, 1)                   RC(5, 7) RC(5, 6) RC(4, 9) RC(4, 8)
+        // SW24 for bluetooth, SW25 for USB                            // 4 arrow keys left up down right
+        // 46 47                                                       48 49 50 51
+        RC(5, 3) RC(5, 2)                                              RC(4, 7) RC(5, 8) RC(5, 10) RC(5, 9)
+        // TOUCH1, TOUCH2, TOUCH3, TOUCH4                              // TOUCH1 (K) , TOUCH2 (L), TOUCH3 (O), TOUCH4 (sum finger)
+        // 52 53 54 55                                                 56 57 58 59
+        RC(1, 5) RC(2, 5) RC(3, 5) RC(4, 5)                            RC(1, 11) RC(2, 11) RC(3, 11) RC(4, 11)
+        >;
+    };
+
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-charlieplex";
+        gpios
+        = <&xiao_d 2 (GPIO_ACTIVE_HIGH)>
+        , <&xiao_d 3 (GPIO_ACTIVE_HIGH)>
+        , <&xiao_d 4 (GPIO_ACTIVE_HIGH)>
+        , <&xiao_d 5 (GPIO_ACTIVE_HIGH)>
+        , <&xiao_d 6 (GPIO_ACTIVE_HIGH)>
+        , <&xiao_d 7 (GPIO_ACTIVE_HIGH)>
+        ;
+        wakeup-source;
+        interrupt-gpios = <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+    };
+
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+        input-processors = <&zip_temp_layer TRACKBALL_L 500>;
+
+        scroller {
+            layers = <SCROLL_L>;
+            input-processors = <&zip_xy_scaler 1 60 &zip_xy_to_scroll_mapper>;
+        };
+    };
+
+    zip_temp_layer: zip_temp_layer {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <2>;
+        require-prior-idle-ms = <100>;
+        excluded-positions = <19 20 21 22 32 33 41 52 53 54 55 56 57 58 59>;
+    };
+
+    vbatt: vbatt {
+        compatible = "zmk,battery-voltage-divider";
+        io-channels = <&adc 0>;
+        power-gpios; // unset
+        output-ohms = <470000>;
+        full-ohms = <(1000000 + 470000)>;
+        // For Ni-Mh 1U
+        mv-to-pct-thresholds = <1100 1150 1200 1220 1240 1260 1280 1300 1320 1350 1400>;
+    };
+
+    led_power:led_power {
+        compatible = "zmk,ext-power-transient";
+        control-gpios = <&gpio0 9 (GPIO_ACTIVE_LOW)>; // NFC1
+    };
+};
+
+&adc {
+    status = "okay";
+};
+
+&pinctrl {
+    spi3_default: spi3_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_MOSI, 0, 10)>; // NFC2
+        };
+    };
+
+    spi3_sleep: spi3_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_MOSI, 0, 10)>;
+            low-power-enable;
+        };
+    };
+};
+
+&spi3 {
+    compatible = "nordic,nrf-spim";
+    status = "okay";
+
+    pinctrl-0 = <&spi3_default>;
+    pinctrl-1 = <&spi3_sleep>;
+    pinctrl-names = "default", "sleep";
+
+    led_strip: ws2812@0 {
+        compatible = "worldsemi,ws2812-spi";
+
+        /* SPI */
+        reg = <0>; /* ignored, but necessary for SPI bindings */
+        spi-max-frequency = <4000000>;
+
+        /* WS2812 */
+        chain-length = <4>; /* number of LEDs */
+        spi-one-frame = <0x70>;
+        spi-zero-frame = <0x40>;
+        color-mapping = <LED_COLOR_ID_GREEN
+                         LED_COLOR_ID_RED
+                         LED_COLOR_ID_BLUE>;
+    };
+};
+
+&animation_layer_status {
+    pixels = <0 1 2 3>;
+    default-color = <HSL(240, 100, 50)>;
+    // default
+    // windows blue
+    // mac red
+    // ios white
+    // linux orange
+    colors = <
+        0
+        HSL(193, 100, 47)
+        HSL(0, 100, 40)
+        HSL(0, 100, 100)
+        HSL(29, 88, 51)
+    >;
+};

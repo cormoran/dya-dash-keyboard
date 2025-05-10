@@ -1,0 +1,29 @@
+# Copyright (c) 2020, The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+description: |
+  Animation for active layer status.
+  pixels[i] brights when layer[i] is enabled.
+
+compatible: "zmk,animation-layer-status"
+include: animation_base.yaml
+
+properties:
+  default-color:
+    type: int
+  colors:
+    type: array
+    description: |
+      List of colors for each layer.
+      Default color is used if 0 is specified or the length is smaller than layer count.
+  layer-offset:
+    type: int
+    default: 0
+    description: |
+      If the value is specified, layer i is mapped to pixels[i - layer-offset].
+      It enables to use all LEDs in split keyboard to indicate active layer.
+  extend-duration-seconds:
+    type: int
+    default: 2
+    description: |
+      Duration to extend if BLE profile status changed during playing the animation.

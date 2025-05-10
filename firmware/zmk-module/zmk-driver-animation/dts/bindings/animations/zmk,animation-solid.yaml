@@ -1,0 +1,22 @@
+# Copyright (c) 2020, The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+description: |
+  Animation for displaying solid colors across the entire area
+compatible: "zmk,animation-solid"
+
+include: animation_base.yaml
+
+properties:
+  duration:
+    type: int
+    default: 5
+    description: |
+      Animation duration in seconds.
+      This is the time it takes for the animation to complete a full cycle and return to the original color.
+      Ignored if only a single color is given.
+  colors:
+    type: array
+    required: true
+    description: |
+      The colors to cycle through during the animation in HSL format.

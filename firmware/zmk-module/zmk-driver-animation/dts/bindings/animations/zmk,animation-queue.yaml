@@ -1,0 +1,15 @@
+# Copyright (c) 2020, The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+description: Queue
+
+compatible: "zmk,animation-queue"
+
+properties:
+  que-size:
+    type: int
+    default: 16
+    description: |
+      Size of the message queue for the animation control driver.
+      This is used to store messages sent to the animation control driver.
+      The size of the queue should be large enough to hold all messages

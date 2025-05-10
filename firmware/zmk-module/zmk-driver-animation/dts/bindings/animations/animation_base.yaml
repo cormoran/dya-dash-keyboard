@@ -1,0 +1,22 @@
+# Copyright (c) 2020, The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+properties:
+  pixels:
+    type: array
+    required: true
+    description: |
+      Pixel positions to which the animation should apply.
+
+  blending-mode:
+    type: string
+    enum:
+      - "normal"
+      - "multiply"
+      - "lighten"
+      - "darken"
+      - "screen"
+      - "subtract"
+    default: "normal"
+    description: |
+      Blending mode for the animation to use during render.

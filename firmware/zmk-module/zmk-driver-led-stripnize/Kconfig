@@ -1,0 +1,2 @@
+config ZMK_DRIVER_LED_STRIPNIZE
+    bool "LED strip-nize"

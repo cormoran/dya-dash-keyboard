@@ -1,0 +1,6 @@
+name: zmk-driver-led-stripnize
+build:
+  cmake: .
+  kconfig: Kconfig
+  settings:
+    dts_root: .

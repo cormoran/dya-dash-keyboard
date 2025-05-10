@@ -1,0 +1,21 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: cormoran
+      url-base: https://github.com/cormoran
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
+  projects:
+    - name: zmk
+      remote: cormoran
+      revision: main
+      import: app/west.yml
+    - name: zmk-pmw3610-driver
+      remote: cormoran
+      revision: main
+    - name: zmk-feature-default-layer
+      remote: cormoran
+      revision: main
+  self:
+    path: config

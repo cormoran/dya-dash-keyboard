@@ -1,0 +1,11 @@
+file_format: "1"
+id: dya_dash
+name: Dya Dash
+type: shield
+url: https://github.com/cormoran/dya-keyboard/
+requires: [seeed_xiao]
+features:
+  - keys
+siblings:
+  - dya_dash_left
+  - dya_dash_right

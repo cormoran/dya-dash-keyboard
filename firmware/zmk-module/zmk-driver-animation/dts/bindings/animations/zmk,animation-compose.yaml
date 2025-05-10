@@ -1,0 +1,24 @@
+# Copyright (c) 2025, cormoran
+# SPDX-License-Identifier: MIT
+
+description: |
+  Animation driver which enables to play multiple animations sequentially or in parallel.
+
+compatible: "zmk,animation-compose"
+
+properties:
+  animations:
+    type: phandles
+    required: true
+
+  durations-ms:
+    type: array
+    required: true
+    description: |
+      Duration of each animation in milliseconds.
+
+  parallel:
+    type: boolean
+    description: |
+      If true, all animations are played in parallel.
+      If false, all animations are played sequentially.

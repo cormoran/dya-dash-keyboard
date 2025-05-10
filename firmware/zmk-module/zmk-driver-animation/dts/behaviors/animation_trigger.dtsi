@@ -1,0 +1,15 @@
+/*
+ * Copyright (c) 2025 cormoran
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+/ {
+    behaviors {
+        /omit-if-no-ref/ animtrig: animtrig {
+            compatible = "zmk,behavior-animation-trigger";
+            #binding-cells = <2>;
+            display-name = "Animation trigger";
+        };
+    };
+};

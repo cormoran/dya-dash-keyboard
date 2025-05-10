@@ -1,0 +1,50 @@
+# Copyright (c) 2020, The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+description: |
+  Animation for displaying endpoint status (BLE connection status & USB)
+compatible: "zmk,animation-endpoint"
+include: animation_base.yaml
+
+properties:
+  duration-seconds-on-endpoint-change:
+    type: int
+    default: 1
+    description: |
+      Animation duration in seconds for endpoint change.
+      Duration is extended to not-connected-duration-seconds if current BLE profile is not connected.
+      Setting this to 0 disables playing animation on endpoint change.
+  not-connected-duration-seconds:
+    type: int
+    default: 5
+    description: |
+      Animation duration in seconds for not-connected-status.
+      Duration is extended to this value if current BLE profile is not connected.
+  blink-duration-seconds:
+    type: int
+    default: 1
+    description: |
+      Duration in seconds for blink cycle in animation.
+  extend-duration-seconds:
+    type: int
+    default: 2
+    description: |
+      Duration to extend if BLE profile status changed during playing the animation.
+  event-handling-start-seconds:
+    type: int
+    default: 2
+    description: |
+      Duration seconds from system startup.
+      Events during this duration is ignored.
+  color-open:
+    type: int
+    required: true
+  color-connected:
+    type: int
+    required: true
+  color-disconnected:
+    type: int
+    required: true
+  color-usb:
+    type: int
+    required: true

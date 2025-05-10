@@ -1,0 +1,24 @@
+{
+  "name": "DYA Dash ZMK Development",
+  "dockerFile": "../../zmk_firmware/.devcontainer/Dockerfile",
+  "runArgs": ["--security-opt", "label=disable"],
+  "containerEnv": {
+    "WORKSPACE_DIR": "${containerWorkspaceFolder}",
+    "PROMPT_COMMAND": "history -a"
+  },
+  "mounts": [
+    "type=volume,source=zmk-root-user,target=/root",
+    "type=volume,source=zmk-zephyr,target=${containerWorkspaceFolder}/../zmk_firmware/zephyr",
+    "type=volume,source=zmk-zephyr-modules,target=${containerWorkspaceFolder}/../zmk_firmware/modules",
+    "type=volume,source=zmk-zephyr-tools,target=${containerWorkspaceFolder}/../zmk_firmware/tools"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-vscode.cpptools"],
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      }
+    }
+  },
+  "forwardPorts": [3000]
+}

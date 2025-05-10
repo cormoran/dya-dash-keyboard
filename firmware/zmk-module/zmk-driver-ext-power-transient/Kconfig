@@ -1,0 +1,2 @@
+config ZMK_DRIVER_EXT_POWER_TRANSIENT
+    bool "ext power transient"

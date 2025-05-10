@@ -1,0 +1,11 @@
+# Copyright (c) 2025 cormoran
+# SPDX-License-Identifier: MIT
+
+description: |
+  Simple ext-power driver implementation without persistent storage.
+  Intended to be used for switching power supply friquently to save power.
+compatible: "zmk,ext-power-transient"
+properties:
+  control-gpios:
+    type: phandle-array
+    required: true

@@ -1,0 +1,2 @@
+target_sources_ifdef(CONFIG_ZMK_DRIVER_LED_STRIPNIZE app PRIVATE src/led_stripnize.c)
+zephyr_include_directories(include)

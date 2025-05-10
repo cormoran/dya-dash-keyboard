@@ -1,0 +1,22 @@
+# Copyright (c) 2025 cormoran
+# SPDX-License-Identifier: MIT
+
+description: |
+  AA
+compatible: "zmk,led-stripnize"
+properties:
+  led:
+    type: phandle
+    required: true
+  red-index:
+    type: int
+    default: 0
+  green-index:
+    type: int
+    default: 1
+  blue-index:
+    type: int
+    default: 2
+  chain-length:
+    type: int
+    default: 1

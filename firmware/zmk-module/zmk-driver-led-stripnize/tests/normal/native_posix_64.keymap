@@ -1,0 +1,60 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/kscan_mock.h>
+#include <dt-bindings/zmk/rgb.h>
+
+/ {
+    chosen {
+        zmk,underglow = &led_stripnize;
+    };
+    leds:leds {
+		compatible = "gpio-leds";
+		led0: led_0 {
+			gpios = <&gpio0 0 GPIO_ACTIVE_LOW>;
+			label = "Red LED";
+		};
+		led1: led_1 {
+			gpios = <&gpio0 1 GPIO_ACTIVE_LOW>;
+			label = "Blue LED";
+		};
+		led2: led_2 {
+			gpios = <&gpio0 2 GPIO_ACTIVE_LOW>;
+			label = "Green LED";
+		};
+	};
+
+    led_stripnize: led_stripnize {
+        compatible = "zmk,led-stripnize";
+        led = <&leds>;
+        chain-length = <1>;
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &rgb_ug RGB_ON &rgb_ug RGB_OFF
+                &rgb_ug RGB_COLOR_HSB(180,100,100) &rgb_ug RGB_COLOR_HSB(0,0,100)
+            >;
+        };
+    };
+};
+
+
+&kscan {
+    events = <
+        /* RGB_OFF */
+        ZMK_MOCK_PRESS(0,1,10)
+        ZMK_MOCK_RELEASE(0,1,10)
+        /* RGB_ON */
+        ZMK_MOCK_PRESS(0,0,10)
+        ZMK_MOCK_RELEASE(0,0,10)
+        /* G&B */
+        ZMK_MOCK_PRESS(1,0,50)
+        ZMK_MOCK_RELEASE(1,0,50)
+        /* RGB */
+        ZMK_MOCK_PRESS(1,1,50)
+        ZMK_MOCK_RELEASE(1,1,50)
+    >;
+};

@@ -1,0 +1,41 @@
+# Copyright (c) 2020, The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+description: |
+  Animation for displaying battery status
+compatible: "zmk,animation-battery-status"
+include: animation_base.yaml
+
+properties:
+  animation-duration-seconds:
+    type: int
+    default: 1
+    description: |
+      blink animation cycle duration in seconds.
+  color-high:
+    type: int
+    required: true
+  color-middle:
+    type: int
+    required: true
+  color-low:
+    type: int
+    required: true
+  low-alert-start-threshold:
+    type: int
+    default: 10
+    description: |
+      battery level percentage threshold to start low battery alert to prompt battery charge
+  low-alert-stop-threshold:
+    type: int
+    default: 5
+    description: |
+      battery level percentage threshold to stop low battery alert to avoid consuming battery by the alert
+  low-alert-interval-seconds:
+    type: int
+    default: 60
+  low-alert-duration-ms:
+    type: int
+    default: 10
+    description: |
+      Low alert animation duration in milliseconds to stop.

@@ -1,0 +1,19 @@
+#include "dya_dash.dtsi"
+
+/ {
+    trackball: trackball {
+        status = "disabled";
+    };
+};
+
+&animation_layer_status {
+    pixels = <3 2 1 0>;
+};
+
+&endpoint_status {
+    pixels = <3 2 1 0>;
+};
+
+&battery_status {
+    pixels = <3 2 1 0>;
+};

@@ -1,0 +1,6 @@
+# Copyright (c) 2025 cormoran
+# SPDX-License-Identifier: MIT
+
+description: |
+  Dummy device to stop animation
+compatible: "zmk,animation-empty"

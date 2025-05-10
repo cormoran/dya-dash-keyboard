@@ -1,0 +1,8 @@
+# Copyright (c) 2025 cormoran
+# SPDX-License-Identifier: MIT
+
+description: Behavior to play animation
+
+compatible: "zmk,behavior-animation-layer-status"
+
+include: two_param.yaml

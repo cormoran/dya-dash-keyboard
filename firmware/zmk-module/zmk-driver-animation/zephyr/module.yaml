@@ -1,0 +1,6 @@
+name: zmk-driver-animation
+build:
+  cmake: .
+  kconfig: Kconfig
+  settings:
+    dts_root: .

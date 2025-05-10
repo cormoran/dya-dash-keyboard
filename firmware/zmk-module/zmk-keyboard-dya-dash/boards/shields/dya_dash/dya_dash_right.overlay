@@ -1,0 +1,55 @@
+#include "dya_dash.dtsi"
+#include <dt-bindings/input/input-event-codes.h>
+// The matrix transform for this board is 6 columns over because the left half is 5 columns wide according to the matrix.
+&default_transform {
+    col-offset = <6>;
+};
+
+&pinctrl {
+    spi0_default: spi0_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 1, 14)>, // xiao D5, see posix_seeed_xiao.overlay in zmk source
+            <NRF_PSEL(SPIM_MOSI, 1, 15)>, // xiao D4
+            <NRF_PSEL(SPIM_MISO, 1, 15)>;
+        };
+    };
+
+    spi0_sleep: spi0_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 1, 14)>,
+                    <NRF_PSEL(SPIM_MOSI, 1, 15)>,
+                    <NRF_PSEL(SPIM_MISO, 1, 15)>;
+            low-power-enable;
+        };
+    };
+};
+
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
+&spi0 {
+    compatible = "nordic,nrf-spim";
+    status = "okay";
+    pinctrl-0 = <&spi0_default>;
+    pinctrl-1 = <&spi0_sleep>;
+    pinctrl-names = "default", "sleep";
+
+    trackball: trackball@0 {
+        status = "okay";
+        compatible = "pixart,pmw3610";
+        reg = <0>;
+        spi-max-frequency = <2000000>;
+        irq-gpios = <&xiao_d 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        cpi = <600>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+        // disable force-awake
+        // force-awake;
+        disable-burst-read;
+    };
+};
+
+&animation_layer_status {
+    // show layer 4,5,6,7 in right side
+    layer-offset = <4>;
+};
