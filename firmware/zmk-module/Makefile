@@ -22,7 +22,7 @@ build-dya-dash:
 	make build-dya-dash-left
 
 build-dya-dash-right:
-	cd $(REPO_ROOT)/firmware/zmk-module && bash build_dya_dash.sh right
+	cd $(REPO_ROOT)/firmware/zmk-module && bash build_dya_dash.sh right -s
 
 build-dya-dash-left:
 	cd $(REPO_ROOT)/firmware/zmk-module && bash build_dya_dash.sh left

@@ -13,11 +13,15 @@ esac
 WEST_ADDITIONAL_OPTS=""
 BUILD_DIR_SUFFIX=""
 
-while getopts "d" optKey; do
+while getopts "ds" optKey; do
     case "$optKey" in
     d)
         WEST_ADDITIONAL_OPTS="${WEST_ADDITIONAL_OPTS} -S zmk-usb-logging"
         BUILD_DIR_SUFFIX="_debug"
+        ;;
+    s)
+        WEST_ADDITIONAL_OPTS="${WEST_ADDITIONAL_OPTS} -S studio-rpc-usb-uart"
+        BUILD_DIR_SUFFIX="${BUILD_DIR_SUFFIX}_studio"
         ;;
     esac
 done

@@ -94,6 +94,7 @@
         //     >;
         // };
         default_layer {
+            display-name = "Base Layer";
             // --------------------------------------------------------------------------------------------------------------------------------------------------
             // |   TAB   |    Q    |    W    |    E       |    R             |    T    |            |    Y    |    U             |    I     |    O    |    P    |    [    |
             // |   CTRL  |    A    |    S    |    D       |    F             |    G    |            |    H    |    J             |    K     |    L    |    ;    |    '    |
@@ -107,11 +108,12 @@
                 &kp LCTRL   &kp A        &kp S     &kp D      &kp F            &kp G       /**/   &hbackspace   &jenter           &kp K       &kp L     &kp SEMI &kp SQT
                 &kp LSHIFT  &kp Z        &kp X     &kp C      &kp V            &kp B       /**/   &kp B         &kp N             &kp M       &kp COMMA &kp DOT  &kp FSLH
                             &mo CONFIG_L &kp LWIN  &kp LALT   &lt LEFT_L SPACE &kp SPACE   /**/   &kp SPACE     &lt RIGHT_L SPACE &XXXXXXXXXX &XXXXXXXXXX
-                &outbt BT_CLR_CMD OUT_TOG &out_bt_nxt                                      /**/   &kp LEFT      &kp UP            &kp DOWN    &kp RIGHT
+                &outbt BT_CLR_CMD OUT_TOG &out_bt_nxt                                      /**/   &kp UP        &kp LEFT          &kp DOWN    &kp RIGHT
                 &mo SCROLL_L &mo SCROLL_L &XXXXXXXXXX &XXXXXXXXXX                            /**/   &mo SCROLL_L  &mo TRACKBALL_L   &XXXXXXXXXX &XXXXXXXXXX
             >;
         };
         windows_default_layer {
+            display-name = "Windows Default";
             bindings = <
                 &__________ &__________ &__________ &__________ &__________ &__________ /**/ &__________ &__________ &__________ &__________ &__________ &__________
                 &__________ &__________ &__________ &__________ &__________ &__________ /**/ &__________ &__________ &__________ &__________ &__________ &__________
@@ -123,6 +125,7 @@
             >;
         };
         mac_default_layer {
+            display-name = "Mac Default";
             bindings = <
                 &__________ &__________ &__________ &__________ &__________ &__________ /**/ &__________ &__________ &__________ &__________ &__________ &__________
                 &__________ &__________ &__________ &__________ &__________ &__________ /**/ &__________ &__________ &__________ &__________ &__________ &__________
@@ -134,6 +137,7 @@
             >;
         };
         ios_default_layer {
+            display-name = "iOS Default";
             bindings = <
                 &__________ &__________ &__________ &__________ &__________ &__________ /**/ &__________ &__________ &__________ &__________ &__________ &__________
                 &__________ &__________ &__________ &__________ &__________ &__________ /**/ &__________ &__________ &__________ &__________ &__________ &__________
@@ -145,6 +149,7 @@
             >;
         };
         linux_default_layer {
+            display-name = "Linux Default";
             bindings = <
                 &__________ &__________ &__________ &__________ &__________ &__________ /**/ &__________ &__________ &__________ &__________ &__________ &__________
                 &__________ &__________ &__________ &__________ &__________ &__________ /**/ &__________ &__________ &__________ &__________ &__________ &__________
@@ -156,6 +161,7 @@
             >;
         };
         left_layer {
+            display-name = "Left SPACE";
             // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
             // |  ESC    |  !  |  @  |  #       |  $  |  %       |                           |  ^  |  &      |  *      |  (  |  )  |  ]  |
             // |         |  1  |  2  |  3       |  4  |  5       |                           |  6  |  7      |  8      |  9  |  0  |  \  |
@@ -172,6 +178,7 @@
             >;
         };
         right_layer {
+            display-name = "Right SPACE";
             bindings = <
                 &__________ &__________ &__________ &__________ &__________ &__________ /**/ &__________ &kp PG_UP    &kp UP       &kp PG_DN   &__________ &kp C_AL_LOCK
                 &__________ &__________ &__________ &__________ &__________ &__________ /**/ &__________ &kp LEFT     &kp DOWN     &kp RIGHT   &__________ &__________
@@ -183,6 +190,7 @@
             >;
         };
         config_layer {
+            display-name = "Config Layer";
             bindings = <
                 &bootloader &XXXXXXXXXX &XXXXXXXXXX &XXXXXXXXXX &XXXXXXXXXX &animtrig ANM_TRG 0 /*bat*/      /**/ &animctl ANM_EN &animctl ANM_DS &animctl ANM_INC &XXXXXXXXXX &XXXXXXXXXX &bootloader
                 &sys_reset  &XXXXXXXXXX &XXXXXXXXXX &XXXXXXXXXX &XXXXXXXXXX &animtrig ANM_TRG 1 /*endpoint*/ /**/ &animctl ANM_BRI &animctl ANM_BRD &XXXXXXXXXX &XXXXXXXXXX &XXXXXXXXXX &sys_reset
@@ -194,6 +202,7 @@
             >;
         };
         trackball_layer {
+            display-name = "Trackball Pointer";
             bindings = <
                 &__________ &__________ &__________ &__________ &__________  &__________ /**/ &__________ &__________ &__________ &__________ &__________  &__________
                 &__________ &__________ &__________ &__________ &__________  &__________ /**/ &__________ &mkp LCLK   &mkp RCLK   &mkp RCLK   &mo SCROLL_L &kp RALT
@@ -205,6 +214,7 @@
             >;
         };
         scroll_layer {
+            display-name = "Trackball Scroll";
             bindings = <
                 &__________ &__________ &__________ &__________ &__________ &__________ /**/ &__________ &__________ &__________ &__________ &__________ &__________
                 &__________ &__________ &__________ &__________ &__________ &__________ /**/ &__________ &__________ &__________ &__________ &__________ &__________
