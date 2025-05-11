@@ -8,16 +8,21 @@
 - Firmware: ZMK
 - Switch: Kailh Choc v2, hotswappable (2pin)
 - AAA battery (1.2V NiMH or 1.5V)
-- Touch sensor buttons
+- Touch sensor buttons ([See movie how it works](https://x.com/cormoran707/status/1916127921720463540))
 - PMW3610 low power trackball sensor
-- LED x 4 x 2 for BLE profile, battery level indication
+- LED x 4 x 2 for BLE profile, battery level indication ([See movie how it works](https://youtu.be/y6X2OnoMX-M))
 - Hardware capability for below features (Not tested yet)
   - Dual trackball support
   - Wired connection
 
 ## Build Guide
 
+[V1.0 (試作) ビルドガイド](./hardware/dya-dash/build-guide/v1/BuildGuide.md)
+
 ## Firmware
+
+Pre-built ZMK firmware is available in [release page](https://github.com/cormoran/dya-dash-keyboard/releases).
+The firmware supports keymapping update with [ZMK studio](https://zmk.studio/).
 
 ## Gallery
 
