@@ -115,7 +115,7 @@ https://cormoran707.booth.pm/items/6913095 で配布中のキットのビルド�
 ## 1. ファームウェアの書き込み
 
 1. XIAO nrf52840 を２つ用意します。
-2. [リリースページ](https://github.com/cormoran/dya-dash-keyboard/releases/tag/v1.0) から `zmk_dya_dash_left.uf2` と `zmk_dya_dash_right.uf2` をダウンロードします
+2. [リリースページ](https://github.com/cormoran/dya-dash-keyboard/releases) から `zmk_dya_dash_left.uf2` と `zmk_dya_dash_right_studio.uf2` をダウンロードします
 3. １つ目の XIAO nrf52840 を USB で PC と接続して、リセットボタンを素早く２回押します
    - [こちらのサイトなどが参考になります](https://qiita.com/KentaHarada/items/3e1612116ec45462a837#2-%E5%A4%89%E6%8F%9B%E3%81%97%E3%81%9Fuf2%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92xiao-nrf52840%E3%81%AB%E6%9B%B8%E3%81%8D%E8%BE%BC%E3%82%80)
 4. PC に `XIAO-SENSE` という名前で USB メモリのようなデバイスが接続されるので、`zmk_dya_dash_left.uf2` をそこにドラッグ&ドロップします
