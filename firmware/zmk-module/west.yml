@@ -6,39 +6,39 @@ manifest:
     #   revision: main
     #   import: app/west.yml
     - name: zmk-pmw3610-driver
-      path: dya-dash-keyboard/firmware/zmk-module/zmk-pmw3610-driver
+      path: firmware/zmk-module/zmk-pmw3610-driver
       url: .
       # revision: test
       import: true
       # remote: cormoran
       # revision: main
     - name: zmk-feature-default-layer
-      path: dya-dash-keyboard/firmware/zmk-module/zmk-feature-default-layer
+      path: firmware/zmk-module/zmk-feature-default-layer
       url: .
       import: true
       # remote: cormoran
       # revision: main
     - name: zmk-driver-animation
-      path: dya-dash-keyboard/firmware/zmk-module/zmk-driver-animation
+      path: firmware/zmk-module/zmk-driver-animation
       url: .
       import: true
       # remote: cormoran
       # revision: main
     - name: zmk-driver-ext-power-transient
-      path: dya-dash-keyboard/firmware/zmk-module/zmk-driver-ext-power-transient
+      path: firmware/zmk-module/zmk-driver-ext-power-transient
       url: .
       import: true
       # remote: cormoran
       # revision: main
     - name: zmk-driver-led-stripnize
-      path: dya-dash-keyboard/firmware/zmk-module/zmk-driver-led-stripnize
+      path: firmware/zmk-module/zmk-driver-led-stripnize
       url: .
       import: true
       # remote: cormoran
       # revision: main
     - name: zmk-keyboard-dya-dash
-      path: dya-dash-keyboard/firmware/zmk-module/zmk-keyboard-dya-dash
+      path: firmware/zmk-module/zmk-keyboard-dya-dash
       url: .
       import: true
   self:
-    path: dya-dash-keyboard/firmware/zmk-module
+    path: firmware/zmk-module
