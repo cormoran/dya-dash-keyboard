@@ -22,3 +22,9 @@
 [submodule "firmware/zmk-module/zmk-feature-default-layer"]
 	path = firmware/zmk-module/zmk-feature-default-layer
 	url = git@github.com:cormoran/zmk-feature-default-layer.git
+[submodule "firmware/zmk-module/zmk-driver-ext-power-transient"]
+	path = firmware/zmk-module/zmk-driver-ext-power-transient
+	url = https://github.com/cormoran/zmk-driver-ext-power-transient.git
+[submodule "firmware/zmk-module/zmk-driver-animation"]
+	path = firmware/zmk-module/zmk-driver-animation
+	url = https://github.com/cormoran/zmk-driver-animation.git
