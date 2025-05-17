@@ -28,3 +28,6 @@
 [submodule "firmware/zmk-module/zmk-driver-animation"]
 	path = firmware/zmk-module/zmk-driver-animation
 	url = https://github.com/cormoran/zmk-driver-animation.git
+[submodule "firmware/zmk-module/zmk-keyboard-dya-dash"]
+	path = firmware/zmk-module/zmk-keyboard-dya-dash
+	url = https://github.com/cormoran/zmk-keyboard-dya-dash.git
