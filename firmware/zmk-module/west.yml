@@ -1,6 +1,6 @@
 manifest:
   remotes: []
-  projects:
+  projects: []
     # - name: zmk
     #   remote: cormoran
     #   revision: main
