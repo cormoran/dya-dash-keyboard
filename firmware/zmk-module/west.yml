@@ -1,34 +1,34 @@
 manifest:
   remotes: []
-  projects: []
+  projects:
     # - name: zmk
     #   remote: cormoran
     #   revision: main
     #   import: app/west.yml
-    # - name: zmk-pmw3610-driver
-    #   path: dya-dash-keyboard/firmware/zmk-module/zmk-pmw3610-driver
-    #   url: none
-    #   # remote: cormoran
-    #   # revision: main
-    # - name: zmk-feature-default-layer
-    #   path: dya-dash-keyboard/firmware/zmk-module/zmk-feature-default-layer
-    #   url: none
-    #   # remote: cormoran
-    #   # revision: main
-    # - name: zmk-driver-animation
-    #   path: dya-dash-keyboard/firmware/zmk-module/zmk-driver-animation
-    #   url: none
-    #   # remote: cormoran
-    #   # revision: main
-    # - name: zmk-driver-ext-power-transient
-    #   path: dya-dash-keyboard/firmware/zmk-module/zmk-driver-ext-power-transient
-    #   url: none
-    #   # remote: cormoran
-    #   # revision: main
-    # - name: zmk-driver-led-stripnize
-    #   path: dya-dash-keyboard/firmware/zmk-module/zmk-driver-led-stripnize
-    #   url: none
-    #   # remote: cormoran
-    #   # revision: main
+    - name: zmk-pmw3610-driver
+      path: dya-dash-keyboard/firmware/zmk-module/zmk-pmw3610-driver
+      url: .
+      # remote: cormoran
+      # revision: main
+    - name: zmk-feature-default-layer
+      path: dya-dash-keyboard/firmware/zmk-module/zmk-feature-default-layer
+      url: .
+      # remote: cormoran
+      # revision: main
+    - name: zmk-driver-animation
+      path: dya-dash-keyboard/firmware/zmk-module/zmk-driver-animation
+      url: .
+      # remote: cormoran
+      # revision: main
+    - name: zmk-driver-ext-power-transient
+      path: dya-dash-keyboard/firmware/zmk-module/zmk-driver-ext-power-transient
+      url: .
+      # remote: cormoran
+      # revision: main
+    - name: zmk-driver-led-stripnize
+      path: dya-dash-keyboard/firmware/zmk-module/zmk-driver-led-stripnize
+      url: .
+      # remote: cormoran
+      # revision: main
   self:
-    path: config
+    path: dya-dash-keyboard/firmware/zmk-module
