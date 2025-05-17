@@ -13,3 +13,21 @@
 [submodule "hardware/kicad_library/external/OPL_Kicad_Library"]
 	path = hardware/kicad_library/external/OPL_Kicad_Library
 	url = https://github.com/Seeed-Studio/OPL_Kicad_Library.git
+[submodule "firmware/zmk-keyboard-dya-dash"]
+	path = firmware/zmk-keyboard-dya-dash
+	url = https://github.com/cormoran/zmk-keyboard-dya-dash.git
+[submodule "firmware/modules/zmk-pmw3610-driver"]
+	path = firmware/modules/zmk-pmw3610-driver
+	url = https://github.com/cormoran/zmk-pmw3610-driver.git
+[submodule "firmware/modules/zmk-feature-default-layer"]
+	path = firmware/modules/zmk-feature-default-layer
+	url = https://github.com/cormoran/zmk-feature-default-layer.git
+[submodule "firmware/modules/zmk-driver-ext-power-transient"]
+	path = firmware/modules/zmk-driver-ext-power-transient
+	url = https://github.com/cormoran/zmk-driver-ext-power-transient.git
+[submodule "firmware/modules/zmk-driver-animation"]
+	path = firmware/modules/zmk-driver-animation
+	url = https://github.com/cormoran/zmk-driver-animation.git
+[submodule "firmware/zmk"]
+	path = firmware/zmk
+	url = https://github.com/cormoran/zmk.git
