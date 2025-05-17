@@ -1,10 +1,10 @@
 manifest:
   remotes: []
   projects:
-    - name: zmk
-      remote: cormoran
-      revision: main
-      import: app/west.yml
+    # - name: zmk
+    #   remote: cormoran
+    #   revision: main
+    #   import: app/west.yml
     - name: zmk-pmw3610-driver
       path: zmk-pmw3610-driver
       url: none
