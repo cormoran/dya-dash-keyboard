@@ -7,7 +7,7 @@ manifest:
     #   import: app/west.yml
     - name: zmk-pmw3610-driver
       path: dya-dash-keyboard/firmware/zmk-module/zmk-pmw3610-driver
-      revision: main
+      # revision: test
       import: true
       # remote: cormoran
       # revision: main
