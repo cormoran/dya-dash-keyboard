@@ -6,27 +6,27 @@ manifest:
     #   revision: main
     #   import: app/west.yml
     - name: zmk-pmw3610-driver
-      path: zmk-pmw3610-driver
+      path: dya-dash-keyboard/firmware/zmk-module/zmk-pmw3610-driver
       url: none
       # remote: cormoran
       # revision: main
     - name: zmk-feature-default-layer
-      path: zmk-feature-default-layer
+      path: dya-dash-keyboard/firmware/zmk-module/zmk-feature-default-layer
       url: none
       # remote: cormoran
       # revision: main
     - name: zmk-driver-animation
-      path: zmk-driver-animation
+      path: dya-dash-keyboard/firmware/zmk-module/zmk-driver-animation
       url: none
       # remote: cormoran
       # revision: main
     - name: zmk-driver-ext-power-transient
-      path: zmk-driver-ext-power-transient
+      path: dya-dash-keyboard/firmware/zmk-module/zmk-driver-ext-power-transient
       url: none
       # remote: cormoran
       # revision: main
     - name: zmk-driver-led-stripnize
-      path: zmk-driver-led-stripnize
+      path: dya-dash-keyboard/firmware/zmk-module/zmk-driver-led-stripnize
       url: none
       # remote: cormoran
       # revision: main
