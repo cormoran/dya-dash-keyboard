@@ -30,5 +30,8 @@ manifest:
       url: .
       # remote: cormoran
       # revision: main
+    - name: zmk-keyboard-dya-dash
+      path: dya-dash-keyboard/firmware/zmk-module/zmk-keyboard-dya-dash
+      url: .
   self:
     path: dya-dash-keyboard/firmware/zmk-module
