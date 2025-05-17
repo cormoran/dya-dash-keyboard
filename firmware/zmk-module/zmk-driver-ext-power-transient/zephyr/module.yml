@@ -1,6 +1,0 @@
-name: zmk-driver-ext-power-transient
-build:
-  cmake: .
-  kconfig: Kconfig
-  settings:
-    dts_root: .

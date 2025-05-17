@@ -1,2 +1,0 @@
-target_sources_ifdef(CONFIG_ZMK_DRIVER_EXT_POWER_TRANSIENT app PRIVATE src/ext_power.c)
-zephyr_include_directories(include)

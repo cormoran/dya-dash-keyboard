@@ -1,8 +1,0 @@
-# Copyright (c) 2020 The ZMK Contributors
-# SPDX-License-Identifier: MIT
-
-description: Animation Control
-
-compatible: "zmk,behavior-animation-control"
-
-include: two_param.yaml
