@@ -1,0 +1,137 @@
+(footprint "Push_PTS636SM43SMTR"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "https://www.digikey.jp/en/products/detail/c-k/PTS636SM43SMTR-LFS/10071723")
+	(tags "PTS636SM43SMTR")
+	(property "Reference" "REF**"
+		(at 0 -3.5 0)
+		(layer "F.SilkS")
+		(uuid "d17f06b3-06cf-4b86-9576-eb75fb3cc3df")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Push_PTS636SM43SMTR"
+		(at 0 3.7 0)
+		(layer "F.Fab")
+		(uuid "5a601e4b-56c2-40d9-8b05-295fe984fd71")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5b3dbcda-4d2b-4bcf-a624-b62285c54e52")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9a3a1786-c9be-43ef-a5c0-bf24729482be")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "57ee934a-b96e-4f81-904f-feaf53b95a51")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start -1.5 -0.75)
+		(end 1.5 0.75)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "d87ccef9-b594-4117-b4d5-eeaa9624a6c6")
+	)
+	(fp_rect
+		(start -3 -1.75)
+		(end 3 1.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "Dwgs.User")
+		(uuid "704fd8e5-dbc5-45e6-98cf-c0e8f1516268")
+	)
+	(fp_rect
+		(start -4.6 -1.8)
+		(end 4.6 1.8)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "2854e4ad-9340-47fc-962f-5ecbd0919b38")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "e5706493-de05-4287-8700-e83ddb8dd1fb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -3.85 0)
+		(size 1.5 2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "dc834195-01dc-42ec-83f9-3044efe2074a")
+	)
+	(pad "2" smd rect
+		(at 3.85 0)
+		(size 1.5 2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "9bff696e-f4e2-4d30-9078-7d0e4fe03cce")
+	)
+	(model "${KICAD8_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_PUSH_1P1T_6x3.5mm_H4.3_APEM_MJTP1243.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
