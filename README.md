@@ -17,7 +17,8 @@
 
 ## Build Guide
 
-[V1.0 (試作) ビルドガイド](./hardware/dya-dash/build-guide/v1/BuildGuide.md)
+- [V2.0 ビルドガイド](./hardware/dya-dash/build-guide/v2/BuildGuide.md)
+- [V1.0 (試作) ビルドガイド](./hardware/dya-dash/build-guide/v1/BuildGuide.md)
 
 ## Firmware
 
@@ -26,36 +27,41 @@ The firmware supports keymapping update with [ZMK studio](https://zmk.studio/).
 
 ## Gallery
 
+### Schematic
+
 Left side schematic
 
-![](img/sch.png)
+![](img/sch.jpg)
 
-### Side view
+### Double trackball supported
 
-- Magnet is embedded in case.
-- Trackball module is very thin and the height is the same to key-top.
-- key-top to key-top is 37mm thickness (except for trackball ball).
+![](img/double-ball.jpeg)
 
-![](img/side.jpg)
+### Colors
+
+![](img/colors.jpeg)
+
+### Bottom
+
+![](img/back.jpg)
 
 ### LED indicators
 
 4x2 LEDs indicates battery level, connected BLE/USB profiles and active layers depending on the setting.
 The schematic and firmware driver is optimized for battery usage. LED modules consume power only when required.
 
+> [!NOTE]
+> The picture is old version's one
+
 ![](img/led.jpg)
-
-### Bottom
-
-![](img/back.jpg)
 
 ## Shop
 
-Coming soon in https://cormoran707.booth.pm/
+Now on sale in https://cormoran707.booth.pm/
 
 ## License
 
-- ZMK firmware (./firmware/zmk_firmware/\*): Inherits its license (MIT).
+- Firmware (./firmware): MIT. See detail in each git submodule.
 - DYA logo <img src="img/dya.svg" width=16> (./img/dya.svg): All rights reserved.
 - Other keyboard pictures under ./img: CC BY
 - Hardware
@@ -63,7 +69,4 @@ Coming soon in https://cormoran707.booth.pm/
   - PCB (\*.kicad_pcb): CC BY-NC
   - Case data (\*.stl): CC BY
 
-## Remaining TODOs
-
-- [ ] Trackball doesn't work after deep sleep. Manual power reset required for now. It might be hardware design level issue, since CS pin is not used.
-- [ ] There might be space for power consumption optimization. See [Power profile result](powerprofile/PowerProfile.md) in detail.
+完全なコピー品が販売された場合に対応できるように PCB 設計を流用して販売することは禁止していますが、回路設計を真似たり似たような設計のキーボードを作ることを牽制したりする意図はありません。

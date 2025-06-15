@@ -2,6 +2,9 @@
 
 DYA Dash を使ったりソフトウェアを改造したりする上で知っておくと良さそうな内容を走り書きしたページです。
 
+> [!WARNING]
+> 以下の内容は v1.0 試作版向けに書かれています。
+
 ## 左右の役割
 
 - 右手側のキーボードが親機として動きます。PC と有線接続する場合は右側の XIAO に USB ケーブルを接続してください。
@@ -76,17 +79,9 @@ ZMK Studio でカスタマイズできるように３つ追加のレイヤーを
 
 ## ファームウェアのビルド方法
 
-まだ整備できていません。少しお待ちください...
+zmk-config のテンプレートを用意しました。以下のレポジトリの説明を読んでください。
 
-https://github.com/cormoran/dya-dash-keyboard/tree/main/firmware/zmk-module このディレクトリで docker と dev container cli をインストールした状態で Readme に従うとビルドできるかもしれないです。
-
-（作者はローカルでビルドしていたのですが、dev container に対応させたらローカルでビルドできなくなってしまってそのまま放置中...）
-
-今後 ZMK で標準の方法である zmk-config レポジトリを使う方法を整備してドキュメントを書く予定です。
-
-今はなんかバグっている部分を治すためにテストを書こうとしていて手が止まっている状態です。
-
-しばらくは大きな改善ができたら最新のファームウェアを https://github.com/cormoran/dya-dash-keyboard/releases/tag にあげる予定です。
+https://github.com/cormoran/zmk-config-dya-dash-template
 
 ## 電池持ちなど
 
