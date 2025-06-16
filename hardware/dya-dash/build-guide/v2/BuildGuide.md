@@ -62,8 +62,6 @@ https://cormoran707.booth.pm/items/6913095 で配布中のキットのビルド�
 
 パーツが足りなさそうな時はできるだけ早く対応するので購入したプラットフォームのメッセージ機能で連絡ください。
 
-![](img/0_kit_contents0.jpeg)
-
 - 回路基板（左、右、トラックボール基板 x2 が接続されたもの。厚み 1.2mm）
 - 3D プリント製パーツ
   - ケース４パーツ（左/右 x トップ/ボトム）
@@ -96,6 +94,10 @@ https://cormoran707.booth.pm/items/6913095 で配布中のキットのビルド�
 - 滑り止め x8
 - ネオジム磁石 x8
 
+![](img/0_kit_contents0.jpeg)
+
+![](img/all-3dp-parts.jpeg)
+
 ## 特別な注意点
 
 - FFC ケーブルの面裏に注意、FFC ケーブルを丁寧に取り扱うこと。
@@ -106,9 +108,9 @@ https://cormoran707.booth.pm/items/6913095 で配布中のキットのビルド�
 
 ### 基板の最終状態
 
-TODO: 鮮明な画像に差し替える
+![](img/final-bottom.jpeg)
 
-![](img/final.jpeg)
+![](img/final-top.jpeg)
 
 ## 1. ファームウェアの書き込み
 
