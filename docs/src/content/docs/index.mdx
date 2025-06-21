@@ -1,0 +1,108 @@
+---
+title: DYA Dash
+template: splash
+hero:
+  title: |
+    <img src="/dya-dash-keyboard/dya.svg" style="display: inline-block; vertical-align: middle; margin-right: 0.3em; margin-bottom: 0.3em; height: 1em;" alt="DYA Logo" />
+    DYA Dash
+  tagline: 電池で動く分割型トラックボール付きキーボード
+  image:
+    file: ../../assets/header.jpeg
+    alt: DYA Dash キーボード
+  actions:
+    - text: ビルドガイド
+      link: /dya-dash-keyboard/build-guide/v2/
+      icon: right-arrow
+      variant: primary
+    - text: 設計データ
+      link: https://github.com/cormoran/dya-dash-keyboard
+      icon: github
+      variant: secondary
+    - text: ビルドキットを購入
+      link: https://cormoran707.booth.pm/items/6913095
+      icon: information
+      variant: minimal
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+## 特徴
+
+<CardGrid>
+  <Card title="無線左右分割キーボード">
+    自由な手の位置でタイピングできます。
+
+    裏側にはマグネットが付いており、持ち運びを考えた設計になっています。
+
+  </Card>
+  <Card title="25mm トラックボール内蔵">
+    マウスを持ち替えることなく、カーソル操作が可能です。
+
+    外出先でもトラックボールを使った快適な操作ができます。
+
+  </Card>
+  <Card title="タッチセンサー搭載">
+    トラックボールのスクロールモード切り替えなどに使えるタッチセンサーを左右に2つずつ搭載しています。
+  </Card>
+  <Card title="電池駆動" >
+    左右はそれぞれ単４電池１本ずつで動作します。
+
+    リチウムポリマーバッテリーと比べて発火の心配が低く、安心して使用できます。
+
+  </Card>
+  <Card title="配列">
+    Column Staggered 配列の美しさと使い慣れた Row Staggered 配列の特徴を兼ね備えています。
+
+    Column Staggered 配列が合わない方でも違和感が少なく使えるように設計されています。
+
+  </Card>
+  <Card title="自由なカスタマイズ">
+    ZMKファームウェアを使っておりソースコードも公開しているので、キーマップやマクロ、細かな振る舞いを自由にカスタマイズできます。
+  </Card>
+</CardGrid>
+
+## 写真
+
+import doubleBall from "../../assets/double-ball.jpeg";
+import colors from "../../assets/colors.jpeg";
+import back from "../../assets/back.jpg";
+import led from "../../assets/led.jpg";
+
+<CardGrid>
+
+<Card>
+  <img src={doubleBall.src} />
+</Card>
+
+<Card>
+  <img src={colors.src} />
+</Card>
+
+<Card>
+  <img src={back.src} />
+</Card>
+
+<Card>
+  <img src={led.src} />
+</Card>
+
+</CardGrid>
+
+## バージョン情報
+
+ハードウェアに新しい機能が追加されたり、後方互換性の無い変更が行われた場合にメジャーバージョンアップします。
+
+V2.0 現在、初期バージョンからソフトウェアの後方互換性は維持されています。
+
+- **V2.0** (2025/06) - 現在の最新版（V1.1 と命名しても良かった）
+- **V1.0** (2025/05) - 試作版
+
+## サポート
+
+- **販売・サポート**: [Booth](https://cormoran707.booth.pm)
+- **技術情報・ソースコード**: [GitHub](https://github.com/cormoran/dya-dash-keyboard)
+- **最新情報**: X [@cormoran707](https://twitter.com/cormoran707)
+
+---
+
+_このドキュメントサイトは半分 AI に作ってもらいました。_
