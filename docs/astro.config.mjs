@@ -14,6 +14,25 @@ export default defineConfig({
       logo: {
         src: "./src/assets/dya.svg",
       },
+      head: [
+        {
+          tag: "script",
+          attrs: {
+            src: "https://www.googletagmanager.com/gtag/js?id=G-4X7C3VY7W6",
+            async: true,
+          },
+        },
+        {
+          tag: "script",
+          content: `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4X7C3VY7W6');
+  `,
+        },
+      ],
       social: [
         {
           icon: "github",
