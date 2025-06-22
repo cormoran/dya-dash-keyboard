@@ -21,10 +21,10 @@ sidebar:
 
 ## 組み立ての流れ
 
-1. **[事前準備](./preparation)** - 必要な部品と工具の確認
-2. **[ファームウェア](./firmware)** - XIAO へのファームウェア書き込み
-3. **[基板組み立て](./pcb-assembly)** - 基板のはんだ付けと動作確認
-4. **[ケース組み立て](./case-assembly)** - ケースの組み立てと完成
+1. **[事前準備](/dya-dash-keyboard/build-guide/v2/preparation)** - 必要な部品と工具の確認
+2. **[ファームウェア](/dya-dash-keyboard/build-guide/v2/firmware)** - XIAO へのファームウェア書き込み
+3. **[基板組み立て](/dya-dash-keyboard/build-guide/v2/pcb-assembly)** - 基板のはんだ付けと動作確認
+4. **[ケース組み立て](/dya-dash-keyboard/build-guide/v2/case-assembly)** - ケースの組み立てと完成
 
 ## 完成イメージ
 

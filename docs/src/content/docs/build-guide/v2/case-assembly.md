@@ -287,7 +287,7 @@ FFC ケーブルの取り回しが難しいです。強く曲げると断線す�
 
 3. トラックボールホルダーに以下の画像のようにはめ込みます。
 
-| | |
+|                            |                            |
 | -------------------------- | -------------------------- |
 | ![](./img/left_ball6.jpeg) | ![](./img/left_ball7.jpeg) |
 
@@ -299,7 +299,7 @@ FFC ケーブルの取り回しが難しいです。強く曲げると断線す�
 
 1. **使い方の学習**
 
-   - [使い方ガイド](../v1/FeatureGuide.md)を参考に BLE のセットアップやキーマップのカスタマイズを行ってください
+   - [使い方ガイド](/dya-dash-keyboard/feature-guide/featureguide/)を参考に BLE のセットアップやキーマップのカスタマイズを行ってください
 
 2. **カスタマイズ**
    - DYA Dash の ZMK ソースコードは [cormoran/zmk-keyboard-dya-dash](https://github.com/cormoran/zmk-keyboard-dya-dash) で公開しています。
