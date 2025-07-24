@@ -28,8 +28,6 @@ sidebar:
 
 ## 完成イメージ
 
-(TODO: 解像度の高い画像に差し替える)
-
 ![完成した基板（裏面）](img/final-bottom.jpeg)
 
 ![完成した基板（表面）](img/final-top.jpeg)
