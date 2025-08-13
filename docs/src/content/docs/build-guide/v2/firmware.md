@@ -15,7 +15,7 @@ sidebar:
 
 ## ファームウェアファイルのダウンロード
 
-1. [GitHub リリースページ](https://github.com/cormoran/dya-dash-keyboard/releases)を開きます
+1. ファームウェアレポジトリの[GitHub リリースページ](https://github.com/cormoran/zmk-keyboard-dya-dash/releases)を開きます
 2. 最新版の以下のファイルをダウンロードします
    - 右トラックボールの場合
      - 右手: `zmk_dya_dash_right_trackball.uf2`

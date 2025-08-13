@@ -22,7 +22,10 @@
 
 ## Firmware
 
-Pre-built ZMK firmware is available in [release page](https://github.com/cormoran/dya-dash-keyboard/releases).
+Firmware is available in https://github.com/cormoran/zmk-keyboard-dya-dash.
+
+You can download pre-built binaries in [the release page](https://github.com/cormoran/zmk-keyboard-dya-dash/releases).
+
 The firmware supports keymapping update with [ZMK studio](https://zmk.studio/).
 
 ## Gallery
