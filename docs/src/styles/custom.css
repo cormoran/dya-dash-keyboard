@@ -1,1 +1,9 @@
 /* Custom styles removed */
+
+:root {
+  --sl-content-width: 60rem;
+}
+
+td {
+  vertical-align: top;
+}

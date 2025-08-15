@@ -54,6 +54,7 @@ export default defineConfig({
           autogenerate: { directory: "feature-guide" },
         },
       ],
+      customCss: ["./src/styles/custom.css"],
     }),
   ],
 });
