@@ -5,9 +5,9 @@ sidebar:
   order: 0
 ---
 
-このページは [Booth](https://cormoran707.booth.pm/items/6913095) で配布中の DYA Dash v3 (rev3) 向けの組み立てガイドです。
+このページは [Booth](https://cormoran707.booth.pm/items/8132198) で配布中の DYA Dash v3 (=rev3) 向けの組み立てガイドです。
 
-はんだ付けの必要な v2 向けのガイドは [こちら](/dya-dash-keyboard/build-guide/v2) をご覧ください。
+はんだ付けの必要な v2 (=rev2) 向けのガイドは [こちら](/dya-dash-keyboard/build-guide/v2) をご覧ください。
 
 :::caution
 v3 は v2 から内部構造が大きく変わっています。v3 向けのファームウェアは v2 とは互換性がないので注意してください。
