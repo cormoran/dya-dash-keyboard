@@ -42,6 +42,10 @@ export default defineConfig({
       ],
       sidebar: [
         {
+          label: "ビルドガイド V3 (2026/03)",
+          autogenerate: { directory: "build-guide/v3" },
+        },
+        {
           label: "ビルドガイド V2 (2025/06)",
           autogenerate: { directory: "build-guide/v2" },
         },
