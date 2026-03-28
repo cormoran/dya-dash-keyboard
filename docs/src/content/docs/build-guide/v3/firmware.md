@@ -16,12 +16,12 @@ sidebar:
 ## ファームウェアファイルのダウンロード
 
 1. ファームウェアレポジトリの[GitHub リリースページ](https://github.com/cormoran/zmk-keyboard-dya-dash/releases)を開きます
-2. v3 向けの最新版のファイルをダウンロードします `zmk_dya_dash_rev3_(right|left)_(module).uf2` というフォーマットになっています。
+2. v3 向けの最新版のファイルをダウンロードします `zmk_dya_dash_v3_(right|left)_(module).uf2` というフォーマットになっています。
    - 名前に left を含むものは右手側に書き込むファームです
    - 名前に right を含むものは右手側に書き込むファームです
    - 例えば右トラックボール、左スイッチモジュールの場合以下のように選択します
-     - 右手は `zmk_dya_dash_rev3_right_trackball.uf2`
-     - 左手は `zmk_dya_dash_rev3_left_switch.uf2`
+     - 右手は `zmk_dya_dash_v3_right_trackball.uf2`
+     - 左手は `zmk_dya_dash_v3_left_switch.uf2`
 
 ## 書き込み手順
 
