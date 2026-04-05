@@ -10,10 +10,18 @@ sidebar:
 
 ## 編集すべきファイル
 
-- [config/dya_dash.keymap](https://github.com/cormoran/zmk-keyboard-dya-dash/blob/main/config/dya_dash.keymap) に設定を調整したいと思われる項目が集まっています。基本的にはこのファイルを編集すれば十分です
-- [boards/shields/dya_dash](https://github.com/cormoran/zmk-keyboard-dya-dash/tree/main/boards/shields/dya_dash) ディレクトリ以下にさまざまな設定ファイル/定義ファイルが入っています。より高度な設定をする場合はこちらの編集が必要かもしれません
+- [config/dya_dash.keymap](https://github.com/cormoran/zmk-keyboard-dya-dash/blob/main/config/dya_dash.keymap)(v2), [config/dya_dash_v3.keymap](https://github.com/cormoran/zmk-keyboard-dya-dash/blob/main/config/dya_dash_v3.keymap) (v3)に設定を調整したいと思われる項目が集まっています。基本的にはこのファイルを編集すれば十分です
+- [boards/shields/dya_dash](https://github.com/cormoran/zmk-keyboard-dya-dash/tree/main/boards/shields/dya_dash)(v2), [boards/shields/dya_dash_v3](https://github.com/cormoran/zmk-keyboard-dya-dash/tree/main/boards/shields/dya_dash_v3)(v3) ディレクトリ以下にさまざまな設定ファイル/定義ファイルが入っています。より高度な設定をする場合はこちらの編集が必要かもしれません
 
-## トラックボール関連の設定を変える
+## 変更例
+
+:::note
+
+V2 の古いファームウェア向けの内容です。DYA Studio 対応したバージョンからは設定が大きく変わっており、以下で解説している内容はすべて DYA Studio でファームウェア書き換えなしに設定が変更できます。
+
+:::
+
+### トラックボール関連の設定を変える
 
 [config/dya_dash.keymap](https://github.com/cormoran/zmk-keyboard-dya-dash/blob/main/config/dya_dash.keymap) の以下の部分がトラックボール関連の設定です。
 ZMK の [Input Processor](https://zmk.dev/docs/keymaps/input-processors) という機能の設定が書かれています。
@@ -46,7 +54,7 @@ ZMK の [Input Processor](https://zmk.dev/docs/keymaps/input-processors) とい�
 &trackball_l {cpi = <600>; };
 ```
 
-### オートマウスレイヤーを無効にする
+#### オートマウスレイヤーを無効にする
 
 `&zip_temp_layer TRACKBALL_L 500` の部分を削除することでトラックボールを触った時に自動的にマウスレイヤーに切り替わる設定を無効にできます。
 
@@ -64,7 +72,7 @@ ZMK の [Input Processor](https://zmk.dev/docs/keymaps/input-processors) とい�
 代わりに、 `keymap` でマウスレイヤーに移動するキーマップ (`&mo TRACKBALL_L` など)を追加する必要があるかもしれません。
 デフォルトのキーマップでは外側のタッチセンサーに触れている間マウスレイヤーが有効になるようになっています。
 
-### トラックボールの感度を調整する
+#### トラックボールの感度を調整する
 
 センサーの CPI を設定するか、ZMK の input processor で変化の倍率を調整する２つの方法があります
 
@@ -95,7 +103,7 @@ ZMK の input processor を使う場合は以下のように `zip_xy_scaler` を
 };
 ```
 
-### トラックボールのスクロールの感度を調整する
+#### トラックボールのスクロールの感度を調整する
 
 スクロール時の動作は `trackball_scroller` という部分で input processor の設定を上書きできるようになっています。
 例えば以下の設定ではスクロール時には入力を 1/60 にします。
@@ -111,7 +119,7 @@ ZMK の input processor を使う場合は以下のように `zip_xy_scaler` を
 };
 ```
 
-## スリープに入るまでの時間を調整する
+### スリープに入るまでの時間を調整する
 
 [dya_dash_left.conf](https://github.com/cormoran/zmk-keyboard-dya-dash/blob/main/boards/shields/dya_dash/dya_dash_left.conf), [dya_dash_right.conf](https://github.com/cormoran/zmk-keyboard-dya-dash/blob/main/boards/shields/dya_dash/dya_dash_right.conf) に書かれている以下の項目を変更するとスリープに入るまでの時間を調整できます。
 

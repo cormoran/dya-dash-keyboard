@@ -5,17 +5,18 @@ sidebar:
   order: 1
 ---
 
-デフォルトでは下の写真のようなキー配列になっています。
-
 :::note
 
-ドキュメントの修正がコードの更新に追いついていない場合があります。
+V2 向けに書かれた記事です。ドキュメントの修正がコードの更新に追いついていない場合があります。
 
-最新のソースコードに基づくキーマップは [こちらのサイト](https://keymap-drawer.streamlit.app/?zmk_url=https%3A%2F%2Fgithub.com%2Fcormoran%2Fzmk-keyboard-dya-dash%2Fblob%2Fmain%2Fconfig%2Fdya_dash.keymap) で確認できます。
+最新のソースコードに基づくキーマップは [zmk-config のレポジトリ](https://github.com/cormoran/zmk-keyboard-dya-dash) の Readme に画像が上がっています。V3 のキーマップもここに上がっています。
 
 - 2025/08/14 firmware v2.4 でキーマップを大幅に更新しました。
+- 2026/04/02 DYA Studio に対応する際に幾つかのキーマップを追加/変更しました。以下のドキュメントには未反映です。
 
 :::
+
+デフォルトでは下の写真のようなキー配列になっています。
 
 - 左手親指内側のキーを押した状態で Left SPACE layer が有効になり、数字キーや数字キーのシフト状態のキーが入力できます。
 - 左手の２つの設定ボタン（T,G の右側のボタン）には、左が USB/BLE の優先切り替え、右が BLE 接続先の切り替えを割り当てています。
